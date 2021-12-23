@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "covid-mock-angular": {
+      "hosting": {
+        "Covid": [
+          "covid-mock-angular"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "covid-mock-angular"
+  }
+}

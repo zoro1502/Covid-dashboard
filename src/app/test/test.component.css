@@ -1,0 +1,109 @@
+.test-form {
+  width: 95%;
+  margin: 0 auto;
+  background-color: #e1fcfd;
+  border-radius: 30px;
+}
+
+.left-side,
+.right-side {
+  width: 50%;
+}
+.left-side {
+  padding: 90px 0;
+}
+.right-side{
+    margin-top:90px;
+}
+
+form {
+  border: 1px solid;
+  padding: 30px 30px;
+  width: 60%;
+  border-radius: 30px;
+  margin-left: 60px;
+  background: url("../../assets/img/covid-19-web_1.jpg");
+  background-size: cover;
+}
+
+.title {
+  font-size: 30px;
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+
+.hide {
+  display: none;
+}
+
+.right-side h1{
+margin-left: 180px;
+}
+
+.result {
+  border: 1px solid;
+  border-radius: 30px;
+  width:600px;
+  height:400px;
+  position:relative;
+}
+
+.custom-control-label {
+  margin: 0 5px;
+  font-weight: 500;
+}
+
+.custom-checkbox{
+  margin-bottom: 30px;
+}
+
+img{
+    width:100%;
+    border-radius:30px;
+    height:100%;
+}
+
+.danger-alert{
+color: red;
+}
+
+.medium-alert{
+  color: orange;
+}
+
+.common-alert{
+  color:green;
+}
+
+
+.status{
+  letter-spacing: 3px;
+  line-height: 1;
+  font-size: 30px;
+  position:absolute;
+}
+
+.status-common{
+  top:50%;
+  left:50%;
+  transform:translate(2%,6%);
+  color:white;
+  font-weight: 500;
+}
+
+.status-medium{
+  top:80%;
+  left: 4%;
+  font-size: 20px;
+  color:orange;
+  font-weight: 500;
+}
+
+.status-danger{
+  top:50%;
+  left:50%;
+  transform:translate(-80%,-40%);
+  color:red;
+  font-weight: 500;
+
+}

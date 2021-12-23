@@ -1,0 +1,36 @@
+h1{
+    color:red;
+    text-align: center;
+    font-weight: bold;
+}
+
+.emergency-form{
+    width: 95%;
+    margin: 0 auto;
+    background-color: #e1fcfd;
+    border-radius: 30px;
+    padding: 60px 0;
+}
+
+form {
+    border: 1px solid;
+    padding: 40px 30px;
+    width: 30%;
+    border-radius: 30px;
+    margin-left: 60px;
+    margin-right: 70px;
+  }
+
+  label{
+  font-weight: 500;
+  font-size: 20px;
+  }
+
+input, textarea{
+    margin-bottom: 10px;
+}
+
+span{
+    color:blue;
+}
+    

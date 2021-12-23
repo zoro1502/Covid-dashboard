@@ -1,0 +1,33 @@
+<div class="emergency-form d-flex">
+    <form [formGroup]="emergency">
+       <h1>Emergency Call<i class="fas fa-phone mx-2"></i></h1>
+        <div class="form-group">
+            <label for="name" class="label-control">Name</label>
+            <input type="text" class="form-control" placeholder="Your name" formControlName="name">
+            <label for="name" class="label-control">Age</label>
+            <input type="number" class="form-control" placeholder="Your Age" formControlName="age">
+        </div>
+        <div class="form-group" formGroupName="address">
+            <label for="name" class="label-control">Address</label>
+            <input type="text" class="form-control" placeholder="Street" formControlName="street">
+            <input type="text" class="form-control" placeholder="Province" formControlName="province">
+            <input type="text" class="form-control" placeholder="City" formControlName="city">
+        </div>
+        <div class="form-froup">
+            <label for="name" class="label-control">Your feeling when you call us</label>
+            <textarea name="felling" rows="6"  class="form-control" formControlName="feeling">No</textarea>
+        </div>
+        <div class="button-group">
+            <button class="btn btn-primary" type="button" (click)="sendPatient()">Send</button>
+        </div>
+    </form> 
+    <div class="right-side">
+       <div class="list-contact">
+           <h1>List phone number: </h1>
+           <h3>- ĐƯỜNG DÂY NÓNG BỘ Y TẾ:<span> 1900.9095</span> </h3>
+           <h3>- Email:<span> duongdaynong@moh.gov.vn</span></h3>
+           <h3>- THANH TRA BỘ:<span> 04. 62732160</span> </h3>
+           <h3>- Email:<span> thanhtra@moh.gov.vn</span></h3>
+       </div>
+    </div>
+</div>

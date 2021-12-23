@@ -1,0 +1,78 @@
+.region {
+  width: 95%;
+  margin: 0 auto;
+  background-color: #e1fcfd;
+  border-radius: 30px;
+}
+
+.left-side{
+  border: 3px solid black;
+  border-radius:30px;
+  background-color: #243b55;
+}
+.section{
+  margin-left: 70px;
+}
+
+.region-detail {
+  border-radius: 10px;
+}
+
+.region-detail i {
+  margin-right: 10px;
+}
+
+.confirmed {
+  background-color: #C3b02d;
+}
+
+.confirmed h5 {
+  color: #685109;
+}
+
+.recovered {
+  background-color: #7ff778;
+}
+
+.recovered h5 {
+  color: #073504;
+}
+
+.death {
+  background-color: black;
+}
+
+.death h5 {
+  color: red;
+}
+
+.fatality {
+  background-color: #145369;
+}
+
+.fatality h5 {
+  color: #be4d25;
+}
+
+.region-about {
+font-weight: 500;
+}
+
+select {
+  border-left: none;
+  border-right: none;
+  border-top: none;
+  border-bottom: 2px solid;
+  padding-right: 150px;
+}
+
+.region-title p {
+  padding-left: 8px;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.region-detail:hover{
+  border: 5px solid#FCB69F;
+  box-sizing: border-box;
+}

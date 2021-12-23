@@ -1,0 +1,14 @@
+.container-fluid {
+  background: url("../assets/img/back_ground_covid.jpeg");
+  background-size: cover;
+  height: 90vh;
+  position: relative;
+}
+
+.box {
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}

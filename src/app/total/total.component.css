@@ -1,0 +1,98 @@
+.total {
+  width: 95%;
+  margin: 0 auto;
+  background-color: #e1fcfd;
+  border-radius: 30px;
+}
+.left-side {
+  border: 3px solid black;
+  border-radius: 30px;
+  background-color: #243b55;
+}
+
+h1 {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.total-detail {
+  border-radius: 10px;
+}
+
+.total-detail:hover {
+  border: 5px solid#FCB69F;
+}
+
+.total-detail i {
+  margin-right: 10px;
+}
+
+.confirmed {
+  background-color: #c3b02d;
+}
+
+.confirmed h5 {
+  color: #685109;
+}
+
+.recovered {
+  background-color: #7ff778;
+}
+
+.recovered h5 {
+  color: #073504;
+}
+
+.death {
+  background-color: black;
+}
+
+.death h5 {
+  color: red;
+}
+
+.fatality {
+  background-color: #145369;
+}
+
+.fatality h5 {
+  color: #be4d25;
+}
+
+.region-about {
+  font-weight: 500;
+}
+
+.section {
+  margin-left: 60px;
+  margin-top: 50px;
+}
+
+.see-map {
+  color: white;
+  background-color: black;
+  position: absolute;
+  bottom: 50%;
+  right: 90px;
+  font-size: 30px;
+  border: 2px solid;
+  padding:0 20px;
+  border-radius: 50%;
+  text-align: center;
+}
+
+.see-map:hover{
+  background-color: white;
+  color:black;
+  cursor: pointer; 
+}
+
+.hide{
+  display: none;
+}
+
+
+/* Code css cua  Long*/
+
+
+/* End*/

@@ -1,0 +1,49 @@
+<div class="test-form d-flex">
+    <div class="left-side">
+        <form [formGroup]="testForm">
+            <div class="custom-control custom-checkbox common form-group" formGroupName="common">
+                <label for="title" class="title">Common</label><br>
+                <input type="checkbox" class="custom-control-input" formControlName="common1">
+                <label class="custom-control-label">Fever, cough, tiredness</label><br>
+                <input type="checkbox" class="custom-control-input" formControlName="common2">
+                <label class="custom-control-label">Get ill</label>
+                <input type="checkbox" class="custom-control-input" formControlName="common3">
+                <label class="custom-control-label">Sore throat</label>
+                <input type="checkbox" class="custom-control-input" formControlName="common4">
+                <label class="custom-control-label">Headache</label>
+            </div>
+            <div class="custom-control custom-checkbox medium form-group" formGroupName="medium">
+                <label for="title" class="title">Less common </label><br>
+                <input type="checkbox" class="custom-control-input" formControlName="medium1">
+                <label class="custom-control-label">Loss of taste or smell</label><br>
+                <input type="checkbox" class="custom-control-input" formControlName="medium2">
+                <label class="custom-control-label">Diarrhoea</label><br>
+                <input type="checkbox" class="custom-control-input" formControlName="medium3">
+                <label class="custom-control-label">A rash on skin, or discolouration of fingers or toes</label><br>
+            </div>
+            <div class="custom-control custom-checkbox serious form-group" formGroupName="serious">
+                <label for="title" class="title">Serious</label><br>
+                <input type="checkbox" class="custom-control-input" formControlName="serious1">
+                <label class="custom-control-label">Difficulty breathing, shortness of breath</label><br>
+                <input type="checkbox" class="custom-control-input" formControlName="serious2">
+                <label class="custom-control-label">Loss of speech or mobility, or confusion</label><br>
+                <input type="checkbox" class="custom-control-input" formControlName="serious3">
+                <label class="custom-control-label">Chest pain</label>
+            </div>
+            <div class="button-group my-3">
+                <button class="btn btn-primary" type="button" (click)="submit()">Submit</button>
+                <button class="btn btn-danger mx-3" type="button" (click)="reset()">Reset</button>
+            </div>
+        </form>
+    </div>
+    <div class="right-side">
+        <h1>Your Result: <span [ngClass]="{'common-alert':percent < 49,'medium-alert':percent > 49 && percent <= 80,'danger-alert':dangerStatus}">{{percent}}%</span></h1>
+        <div class="result" [ngClass]="{'hide':formStatus}">
+            <img src="../../assets/img/coivd_notice_danger.jpg" [ngClass]="{'hide':imgDanger}">
+            <img src="../../assets/img/Flu.jpg" [ngClass]="{'hide':imgCommon}">
+            <img src="../../assets/img/becareful.jpg" [ngClass]="{'hide':imgMedium}">
+            <p class="status" [ngClass]="{'status-common':percent < 49,'status-medium':percent > 49 && percent <= 80,'status-danger':dangerStatus}">{{status}}</p>
+        </div>
+        <h1 [ngClass]="{'hide':!dangerStatus}">Contact here: <a href="emergency">Emergency</a> </h1>
+    </div>
+</div>

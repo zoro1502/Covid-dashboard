@@ -1,0 +1,26 @@
+<div class="chart">
+    <div class="chart-header d-flex">
+        <select class="form-select w-25 mx-auto" aria-label="Default select example" name="infor" [(ngModel)]="infor" (change)="showInformation()">
+            
+            <option value="1">All information</option>
+            <option value="2">Confirmed</option>
+            <option value="3">Deaths</option>
+            <option value="4">Recovered</option>
+        </select>
+
+            
+        <select class="form-select w-25 mx-auto" aria-label="Default select example" name="time" [(ngModel)]="time" (change)="showInformationAtTime()">
+            <option value="0" selected disabled>Choose time you want to know</option>
+            <option value="1">1 week</option>
+            <option value="2">1 month</option>
+        </select>
+        
+    </div>
+
+    <div class="chart-form w-50 mx-auto">
+        <ngx-charts-line-chart  [view]="view" [autoScale]="autoScale" [scheme]="colorScheme" [legend]="legend" [showXAxisLabel]="showXAxisLabel"
+            [showYAxisLabel]="showYAxisLabel" [xAxis]="xAxis" [yAxis]="yAxis" [xAxisLabel]="xAxisLabel"
+            [yAxisLabel]="yAxisLabel" [timeline]="timeline" [results]="single">
+        </ngx-charts-line-chart>
+
+    </div>
