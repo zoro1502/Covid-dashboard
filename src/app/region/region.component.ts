@@ -32,7 +32,7 @@ export class RegionComponent implements OnInit {
     
   }
 
- 
+
 
   ngOnInit(): void {
     this.service.getListCase().subscribe((response: any) => {

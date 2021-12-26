@@ -1,36 +1,59 @@
-h1{
-    color:red;
-    text-align: center;
-    font-weight: bold;
+h1 {
+  color: red;
+  text-align: center;
+  font-weight: bold;
 }
 
-.emergency-form{
-    width: 95%;
-    margin: 0 auto;
-    background-color: #e1fcfd;
-    border-radius: 30px;
-    padding: 60px 0;
+.emergency-form {
+  width: 100%;
+  margin: 0 auto;
+  background-color: #e1fcfd;
 }
 
 form {
-    border: 1px solid;
-    padding: 40px 30px;
-    width: 30%;
-    border-radius: 30px;
-    margin-left: 60px;
-    margin-right: 70px;
-  }
+  /* padding: 40px 30px; */
+  width: 100%;
+  /* margin: 0 auto; */
+}
 
-  label{
+label {
   font-weight: 500;
   font-size: 20px;
+}
+
+input,
+textarea {
+  margin-bottom: 10px;
+}
+
+span {
+  color: blue;
+}
+
+.list-contact {
+  width: 90%;
+  margin: 0 auto;
+}
+
+@media only screen and (min-width: 992px) {
+  .emergency-form {
+    height: 100vh;
   }
 
-input, textarea{
-    margin-bottom: 10px;
-}
+  form {
+    width: 40%;
+  }
 
-span{
-    color:blue;
+  .right-side {
+    padding: 40px 0;
+  }
 }
-    
+@media only screen and (max-width: 992px){
+ 
+  .form-group{
+    padding: 20px;
+  }
+   .right-side {
+    padding: 40px 0;
+  }
+}

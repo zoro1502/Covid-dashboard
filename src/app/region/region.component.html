@@ -1,8 +1,8 @@
-<div class="region text-white d-flex py-3">
-    <div class="left-side mx-5 mt-3 px-4">
-        <div class="region-title d-flex align-items-center">
-            <h2 class="text-white mx-3">Regional</h2>
-            <div class="country-box mx-2 my-3">
+<div class="region text-white d-flex flex-column flex-lg-row m-0">
+    <div class="left-side">
+        <div class="region-title d-flex flex-sm-column align-items-center">
+            <h2 class="text-white"><i class="fas fa-globe-europe mx-2"></i>Regional</h2>
+            <div class="country-box mx-2 my-3 d-sm-flex">
                 <p class="text-white">Country & Region</p>
                 <select class="form-select form-select-sm" name="choice" [(ngModel)]="choice" aria-label=".form-select-sm example"
                 (change)="getSelect()" name="region">
@@ -10,26 +10,27 @@
                 </select>
             </div>
         </div>
-        <div class="section row w-100">
-            <div class="region-detail col-4 confirmed py-4 my-5">
+        <div class="section row">
+            <div class="region-detail col-6 col-sm-3 col-lg-4 px-sm-5 offset-lg-1 py-4 mt-lg-5 confirmed ">
                 <h5 class="title"><i class="fas fa-user"></i> Confirmed</h5>
-                <p *ngIf="country!==undefined" class="region-about">{{country.confirmed | number}}</p>
+                <p class="region-about">{{country.confirmed | number}}</p>
             </div>
-            <div class="region-detail col-4 offset-1 recovered py-4 my-5">
+            <div class="region-detail col-6 col-sm-3 col-lg-4 px-sm-5 offset-lg-1 py-4 mt-lg-5 recovered">
                 <h5 class="title"><i class="fas fa-first-aid"></i>Recovered</h5>
-                <p *ngIf="country!==undefined" class="region-about">{{country.confirmed | number}}</p>
+                <p class="region-about">{{country.confirmed | number}}</p>
             </div>
-            <div class="region-detail col-4 death py-4">
+            <div class="region-detail col-6 col-sm-3 col-lg-4 px-sm-5 offset-lg-1 py-4 mt-lg-5 death">
                 <h5 class="title"><i class="fas fa-bed"></i>Death</h5>
-                <p *ngIf="country!==undefined" class="region-about">{{country.confirmed | number}}}</p>
+                <p class="region-about">{{country.confirmed | number}}</p>
             </div>
-            <div class="region-detail col-4  offset-1 fatality py-4">
+            <div class="region-detail col-6 col-sm-3 col-lg-4 px-sm-5 offset-lg-1 py-4 mt-lg-5 fatality ">
                 <h5 class="title"> <i class="fas fa-exclamation-circle"></i>Fatality rate</h5>
-                <p *ngIf="country!==undefined" class="region-about">{{rate}} %</p>
+                <p class="region-about">{{rate}}%</p>
             </div>
         </div>
     </div>
-    <div class="right-side my-4" *ngIf="choice!==undefined">
+    <div class="right-side" *ngIf="choice!==undefined">
+        <h2 class="text-dark text-center"><i class="fas fa-chart-line text-primary mx-2"></i>Chart</h2>
         <app-chart-region [multi]="multi" [choice]="choice" [infor] = "infor" [time] = "time"></app-chart-region>
     </div>
 </div>

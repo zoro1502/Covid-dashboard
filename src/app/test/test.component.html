@@ -1,6 +1,7 @@
-<div class="test-form d-flex">
-    <div class="left-side">
-        <form [formGroup]="testForm">
+<div #check class="test-form d-flex flex-column">
+    <div class="left-side" [ngClass]="{'hide':checkSubmit}">
+        <form [formGroup]="testForm" class="d-flex">
+           <div class="left-form">
             <div class="custom-control custom-checkbox common form-group" formGroupName="common">
                 <label for="title" class="title">Common</label><br>
                 <input type="checkbox" class="custom-control-input" formControlName="common1">
@@ -19,7 +20,9 @@
                 <input type="checkbox" class="custom-control-input" formControlName="medium2">
                 <label class="custom-control-label">Diarrhoea</label><br>
                 <input type="checkbox" class="custom-control-input" formControlName="medium3">
-                <label class="custom-control-label">A rash on skin, or discolouration of fingers or toes</label><br>
+                <label class="custom-control-label">A rash on skin, or discolouration</label>
+                <label class="custom-control-label"> of fingers or toes</label>
+
             </div>
             <div class="custom-control custom-checkbox serious form-group" formGroupName="serious">
                 <label for="title" class="title">Serious</label><br>
@@ -34,16 +37,26 @@
                 <button class="btn btn-primary" type="button" (click)="submit()">Submit</button>
                 <button class="btn btn-danger mx-3" type="button" (click)="reset()">Reset</button>
             </div>
+           </div>
+            <div class="box-description">
+                <h1 class="text-dark">Description</h1>
+                <h2>- This test helps you check if you are at risk of contracting covid 19?</h2>
+                <h2>- Please select the symptoms you are experiencing.</h2>
+                <h2><span>Note:</span> This is just a test, it's for reference only, when you have any bad signs, please contact the medical center immediately !</h2>
+            </div>
         </form>
     </div>
-    <div class="right-side">
+    <div class="right-side" [ngClass]="{'hide':!checkSubmit}">
         <h1>Your Result: <span [ngClass]="{'common-alert':percent < 49,'medium-alert':percent > 49 && percent <= 80,'danger-alert':dangerStatus}">{{percent}}%</span></h1>
         <div class="result" [ngClass]="{'hide':formStatus}">
             <img src="../../assets/img/coivd_notice_danger.jpg" [ngClass]="{'hide':imgDanger}">
             <img src="../../assets/img/Flu.jpg" [ngClass]="{'hide':imgCommon}">
             <img src="../../assets/img/becareful.jpg" [ngClass]="{'hide':imgMedium}">
-            <p class="status" [ngClass]="{'status-common':percent < 49,'status-medium':percent > 49 && percent <= 80,'status-danger':dangerStatus}">{{status}}</p>
+            <div class="result-content">
+                <p class="status" [ngClass]="{'status-common':percent < 49,'status-medium':percent > 49 && percent <= 80,'status-danger':dangerStatus}">{{status}}</p>
+               </div>
         </div>
-        <h1 [ngClass]="{'hide':!dangerStatus}">Contact here: <a href="emergency">Emergency</a> </h1>
+        <h1 [ngClass]="{'hide':!dangerStatus}">Contact here: <a href="emergency">Emergency</a></h1>
     </div>
+ 
 </div>

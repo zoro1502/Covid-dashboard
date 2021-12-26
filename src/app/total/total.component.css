@@ -1,26 +1,16 @@
 .total {
-  width: 95%;
-  margin: 0 auto;
   background-color: #e1fcfd;
-  border-radius: 30px;
 }
+
 .left-side {
-  border: 3px solid black;
-  border-radius: 30px;
+  width: 100%;
   background-color: #243b55;
 }
 
-h1 {
+h1,
+h2 {
   text-align: center;
   margin-top: 30px;
-}
-
-.total-detail {
-  border-radius: 10px;
-}
-
-.total-detail:hover {
-  border: 5px solid#FCB69F;
 }
 
 .total-detail i {
@@ -63,36 +53,55 @@ h1 {
   font-weight: 500;
 }
 
-.section {
-  margin-left: 60px;
-  margin-top: 50px;
-}
-
-.see-map {
-  color: white;
-  background-color: black;
-  position: absolute;
-  bottom: 50%;
-  right: 90px;
-  font-size: 30px;
-  border: 2px solid;
-  padding:0 20px;
-  border-radius: 50%;
-  text-align: center;
-}
-
-.see-map:hover{
-  background-color: white;
-  color:black;
-  cursor: pointer; 
-}
-
-.hide{
+.hide {
   display: none;
 }
 
+.section {
+  width: 100%;
+  margin: 0;
+}
 
-/* Code css cua  Long*/
+@media only screen and (min-width: 992px) {
+  .total {
+    width: 90%;
+    height: 82vh;
+    margin: 0 auto;
+  }
 
+  .left-side {
+    width: 35%;
+    background-color: #243b55;
+    margin: 50px 0;
+    margin-left: 50px;
+    border-radius: 30px;
+  }
+  .right-side {
+    width: 50%;
+  }
 
-/* End*/
+  .section {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .total-detail {
+    border-radius: 20px;
+  }
+}
+
+.line-chart {
+  width: 100%;
+  display: none;
+}
+
+@media only screen and (min-width: 577px) {
+  .line-chart {
+    width: 100%;
+    display: block;
+  }
+
+  .horizon-chart {
+    display: none;
+  }
+}

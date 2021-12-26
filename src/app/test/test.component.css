@@ -1,29 +1,24 @@
 .test-form {
-  width: 95%;
+  width: 100%;
+  height: 100%;
   margin: 0 auto;
-  background-color: #e1fcfd;
-  border-radius: 30px;
+  background: url("../../assets/img/back_ground_covid.jpeg");
 }
 
 .left-side,
 .right-side {
-  width: 50%;
+  width: 100%;
 }
-.left-side {
-  padding: 90px 0;
-}
-.right-side{
-    margin-top:90px;
+
+.right-side {
+  background-color: #243b55;
 }
 
 form {
-  border: 1px solid;
-  padding: 30px 30px;
-  width: 60%;
-  border-radius: 30px;
-  margin-left: 60px;
+  padding: 47.33px 15px;
   background: url("../../assets/img/covid-19-web_1.jpg");
   background-size: cover;
+  height: 90vh;
 }
 
 .title {
@@ -36,16 +31,9 @@ form {
   display: none;
 }
 
-.right-side h1{
-margin-left: 180px;
-}
-
 .result {
-  border: 1px solid;
-  border-radius: 30px;
-  width:600px;
-  height:400px;
-  position:relative;
+  width: 100%;
+  height: 75vh;
 }
 
 .custom-control-label {
@@ -53,57 +41,124 @@ margin-left: 180px;
   font-weight: 500;
 }
 
-.custom-checkbox{
+.custom-checkbox {
   margin-bottom: 30px;
 }
 
-img{
-    width:100%;
-    border-radius:30px;
-    height:100%;
+img {
+  width: 100%;
+  height: 80%;
 }
 
-.danger-alert{
-color: red;
+.danger-alert {
+  color: red;
 }
 
-.medium-alert{
+.medium-alert {
   color: orange;
 }
 
-.common-alert{
-  color:green;
+.common-alert {
+  color: green;
 }
 
-
-.status{
-  letter-spacing: 3px;
-  line-height: 1;
-  font-size: 30px;
-  position:absolute;
-}
-
-.status-common{
-  top:50%;
-  left:50%;
-  transform:translate(2%,6%);
-  color:white;
-  font-weight: 500;
-}
-
-.status-medium{
-  top:80%;
-  left: 4%;
+.status {
+  margin-left: 15px;
+  margin-top: 10px;
+  line-height: 1.5;
   font-size: 20px;
-  color:orange;
+}
+
+.status-common {
+  color: white;
   font-weight: 500;
 }
 
-.status-danger{
-  top:50%;
-  left:50%;
-  transform:translate(-80%,-40%);
-  color:red;
+.status-medium {
+  color: orange;
   font-weight: 500;
+  font-size: 15px;
+}
+
+.status-danger {
+  /* top:70%;
+  left:50%;
+  transform:translate(-50%,-10%); */
+  color: red;
+  font-weight: 500;
+  font-size: 15px;
+}
+
+h1 {
+  text-align: center;
+  margin-top: 15px;
+  color: white;
+}
+
+.box-description {
+  width: 30%;
+  border: 1px solid;
+  background-color: #ffff99;
+  border-radius: 30px;
+  padding: 0 10px;
+}
+
+@media only screen and (min-width: 992px) {
+  .left-side {
+    height: 82vh;
+    position: relative;
+  }
+
+  form {
+    width: 80%;
+    height: 80%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 30px;
+  }
+
+  .right-side {
+    width: 50%;
+    margin: 0 auto;
+  }
+
+  .box-description h2 {
+    font-size: 14px;
+  }
+
+  .left-form {
+    width: 40%;
+    margin-left: 200px;
+  }
+
+  span {
+    color: red;
+  }
+}
+
+@media only screen and (max-width: 991px) {
+  .left-form {
+    width: 50%;
+    margin-left: 100px;
+  }
+  .box-description {
+    height: 70%;
+  }
+  .box-description h2 {
+    font-size: 10px;
+  }
+}
+
+@media only screen and (max-width: 575px) {
+  .box-description {
+    display: none;
+  }
+
+  .left-form {
+    width: 100%;
+    margin: 0;
+  }
 
 }

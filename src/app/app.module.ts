@@ -22,13 +22,13 @@ import { ChartComponent } from './total/chart/chart.component';
 import { EmergencyComponent } from './test/emergency/emergency.component';
 import { MatSliderModule } from '@angular/material/slider';
 import {MatButtonModule} from '@angular/material/button';
-
 import { environment } from '../environments/environment';
-
-
-
-
 import { AngularFireModule } from '@angular/fire/compat';
+import { LoginComponent } from './login/login.component';
+import { HorizonChartComponent } from './total/horizon-chart/horizon-chart.component';
+import { ListPatientComponent } from './list-patient/list-patient.component';
+import { PatientDetailComponent } from './list-patient/patient-detail/patient-detail.component';
+import { NgxPaginationModule } from 'ngx-pagination';
 @NgModule({
   declarations: [
     AppComponent,
@@ -41,7 +41,10 @@ import { AngularFireModule } from '@angular/fire/compat';
     TestComponent,
     ChartRegionComponent,
     EmergencyComponent,
-  
+    LoginComponent,
+    HorizonChartComponent,
+    ListPatientComponent,
+    PatientDetailComponent,
   ],
   imports: [
     BrowserModule,
@@ -53,7 +56,8 @@ import { AngularFireModule } from '@angular/fire/compat';
     LeafletModule,
     ReactiveFormsModule,
     MatButtonModule,
-    AngularFireModule.initializeApp(environment.firebase)
+    AngularFireModule.initializeApp(environment.firebase),
+    NgxPaginationModule
   ],
   providers: [],
   bootstrap: [AppComponent]

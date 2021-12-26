@@ -1,27 +1,32 @@
-<div class="total d-flex py-3">
-    <div class="left-side mx-5 mt-3 px-5">
-        <h1 class="col-12 text-white"><i class="fas fa-globe-europe mx-2 text-primary"></i>World Wide</h1>
-        <div class=" section row text-white">
-            <div class="total-detail col-4 py-4 my-5 confirmed ">
-                <h5 class="title"><i class="fas fa-user"></i> Confirmed</h5>
-                <p class="region-about">{{total.confirmed}}</p>
-            </div>
-            <div class="total-detail col-4 offset-1  py-4 my-5 recovered">
-                <h5 class="title"><i class="fas fa-first-aid"></i>Recovered</h5>
-                <p class="region-about">{{total.recovered}}</p>
-            </div>
-            <div class="total-detail col-4 py-4  death">
-                <h5 class="title"><i class="fas fa-bed"></i>Death</h5>
-                <p class="region-about">{{total.deaths}}</p>
-            </div>
-            <div class="total-detail col-4  py-4 offset-1 fatality">
-                <h5 class="title"> <i class="fas fa-exclamation-circle"></i>Fatality rate</h5>
-                <p class="region-about">{{deathRate}} %</p>
+<div class="total d-flex flex-column flex-lg-row m-0">
+        <div class="left-side">
+            <h1 class="col-12 text-white"><i class="fas fa-globe-europe text-primary mx-2"></i>World Wide</h1>
+            <div class="section row">
+                <div class="total-detail col-6 col-sm-3 col-lg-4 px-sm-5 offset-lg-1 py-4 mt-lg-5 confirmed ">
+                    <h5 class="title"><i class="fas fa-user"></i> Confirmed</h5>
+                    <p class="region-about">{{total.confirmed}}</p>
+                </div>
+                <div class="total-detail col-6 col-sm-3 px-sm-5 col-lg-4 offset-lg-2 py-4 mt-lg-5 recovered">
+                    <h5 class="title"><i class="fas fa-first-aid"></i>Recovered</h5>
+                    <p class="region-about">{{total.recovered}}</p>
+                </div>
+                <div class="total-detail col-6 col-sm-3 px-sm-5 col-lg-4 offset-lg-1 py-4 mt-lg-5 death">
+                    <h5 class="title"><i class="fas fa-bed"></i>Death</h5>
+                    <p class="region-about">{{total.deaths}}</p>
+                </div>
+                <div class="total-detail col-6  col-sm-3 px-sm-5 col-lg-4 offset-lg-2 mt-lg-5 py-4 fatality">
+                    <h5 class="title"> <i class="fas fa-exclamation-circle"></i>Fatality rate</h5>
+                    <p class="region-about">{{deathRate}} %</p>
+                </div>
             </div>
         </div>
+    <div class="right-side">
+        <h2><i class="fas fa-chart-line text-primary mx-2"></i>Chart</h2>
+        <div class="line-chart">
+            <app-chart></app-chart>
+        </div>
+    <div class="horizon-chart">
+        <app-horizon-chart></app-horizon-chart>
     </div>
-    <div class="right-side my-5">
-        <app-chart></app-chart>
     </div>
-   
 </div>

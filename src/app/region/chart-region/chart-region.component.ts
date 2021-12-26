@@ -21,8 +21,7 @@ export class ChartRegionComponent implements OnInit {
   @Input() multi: any
   arr: any = ["1/22/20", "6/30/20", "12/31/20", "6/30/21", "12/19/21"]
   single: any = []
-  view: [number, number] = [700, 500];
-  legend: boolean = true;
+  legend: boolean = false;
   showLabels: boolean = true;
   animations: boolean = true;
   xAxis: boolean = true;
@@ -30,7 +29,7 @@ export class ChartRegionComponent implements OnInit {
   showYAxisLabel: boolean = true;
   showXAxisLabel: boolean = true;
   xAxisLabel: string = 'Year';
-  yAxisLabel: string = 'Population';
+  yAxisLabel: string = 'People';
   timeline: boolean = true;
   autoScale:boolean = true
  

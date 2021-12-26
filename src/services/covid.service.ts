@@ -10,8 +10,12 @@ export class CovidService {
   choice:string = 'AR'
   infor:string = "1"
   time:string = "0"
-  // patienList:any 
+  loginStatus:boolean = false;
+  currentUser!:any
+
   covidSubject = new Subject()
+  loginStatusSubject = new Subject()
+
   constructor(private http: HttpClient,
     private db:AngularFireDatabase) {}
 
@@ -36,6 +40,7 @@ export class CovidService {
       'https://master-covid-19-api-laeyoung.endpoint.ainize.ai/jhu-edu/latest?onlyCountries=true'
     );
   }
+
   getTimeseriesByRegion(value:string){
     return this.http.get(`https://master-covid-19-api-laeyoung.endpoint.ainize.ai/jhu-edu/timeseries?iso2=${value}&onlyCountries=true`)
   }
@@ -49,6 +54,7 @@ export class CovidService {
       `https://master-covid-19-api-laeyoung.endpoint.ainize.ai/jhu-edu/latest?iso2=${country}&onlyCountries=true`
     );
   }
+  
   getTimes(){
     return this.http.get(`https://master-covid-19-api-laeyoung.endpoint.ainize.ai/jhu-edu/timeseries?onlyCountries=true`)
   }
@@ -87,24 +93,25 @@ export class CovidService {
 
 
   handleInsertPatient(patient:any){
-      this.db.object('patient/'+String(patient.id)).set(patient)
+      this.db.object('patient/'+String(patient.id)).set(patient);
   }
 
-  getPatients(){
-    return  new Promise((resolve: any, reject: any) => {
-      this.db.list("patient").valueChanges().subscribe(value => {
-        resolve(value)
-      })
+  getLoginStatus(user:any){
+    this.loginStatus = true;
+    localStorage.setItem('currentUser', JSON.stringify(user));
+    this.currentUser = user
+    this.loginStatusSubject.next({
+      loginStatus: this.loginStatus,
+      currentUser: user,
     })
   }
-  async getListPatient(patien:any){
-    let pt: any
-    await this.getPatients().then(value => {
-      pt = value
+  logout(){
+    this.loginStatus = false;
+    localStorage.removeItem('currentUser');
+
+    this.loginStatusSubject.next({
+      loginStatus: false,
+      currentUser: null,
     })
-    // this.patienList = pt
-    patien = pt
-   return patien
   }
- 
 }

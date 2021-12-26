@@ -1,4 +1,6 @@
-<ngx-charts-line-chart [view]="view" [scheme]="colorScheme" [legend]="legend" [showXAxisLabel]="showXAxisLabel"
+<div #chart class="chart">
+<ngx-charts-line-chart [scheme]="colorScheme" [legend]="legend" [showXAxisLabel]="showXAxisLabel"
 [showYAxisLabel]="showYAxisLabel" [xAxis]="xAxis" [yAxis]="yAxis" [xAxisLabel]="xAxisLabel"
-[yAxisLabel]="yAxisLabel" [timeline]="timeline" [results]="single">
+[yAxisLabel]="yAxisLabel" [timeline]="timeline" [results]="single" [view]="[chart.offsetWidth,500]">
 </ngx-charts-line-chart>
+</div>

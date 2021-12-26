@@ -9,8 +9,8 @@ import { CovidService } from 'src/services/covid.service';
 })
 export class EmergencyComponent implements OnInit {
   emergency!:FormGroup;
-  patient:any;
-  pt:any
+
+
   constructor(private fb:FormBuilder,private service:CovidService) { 
     this.emergency = this.fb.group({
       name:[],
@@ -22,12 +22,12 @@ export class EmergencyComponent implements OnInit {
       }),
       feeling:[]
     });
-   this.pt =  this.service.getListPatient(this.pt)
-    console.log(this.pt)
   }
 
   ngOnInit(): void {
+
   }
+
 
   get name(){
     return this.emergency.get('name') as FormControl;
@@ -50,10 +50,14 @@ export class EmergencyComponent implements OnInit {
   get feeling(){
     return this.emergency.get('feeling') as FormControl;
   }
+
   sendPatient(){
-    let patient:any = {
+    let patient:Patient = {
       id:Math.floor(Math.random()*1000000),
-      ...this.emergency.value}
-   this.service.handleInsertPatient(patient) // dua vao mang
+      ...this.emergency.value};
+   this.service.handleInsertPatient(patient); // dua vao mang
+   alert("The hospital will call you soon,, take care !");
+   this.emergency.reset();
   }
+
 }

@@ -16,6 +16,7 @@ export class TestComponent implements OnInit {
   imgCommon: boolean = true;
   percent:number =0;
   dangerStatus:boolean=false;
+  checkSubmit:boolean=false;
   constructor(private fb: FormBuilder) {
     this.testForm = this.fb.group({
       common: this.fb.group({
@@ -80,7 +81,6 @@ export class TestComponent implements OnInit {
   }
 
   submit() {
-
     this.formStatus = true;
     this.imgDanger = true;
     this.imgMedium = true;
@@ -136,15 +136,17 @@ export class TestComponent implements OnInit {
     }
     this.formStatus = false;
     this.percent = percent;
+    this.checkSubmit = true;
   }
 
   reset() {
     this.testForm.reset();
     this.formStatus = true;
+    this.imgCommon= true;
     this.imgDanger= true;
     this.imgMedium = true;
-    this.imgCommon= true;
     this.percent = 0;
     this.dangerStatus = false;
+    this.checkSubmit=false;
   }
 }

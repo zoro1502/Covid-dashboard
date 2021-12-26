@@ -1,18 +1,15 @@
 .footer{
     background-color: black;
-    width: 100%;
-    background:url('../../assets/img/mask.jpg');
-
+    height:10vh;
 }
 
-h2{
+h1{
     font-size:35px;
-    color: black;
+    color: white;
     text-align: center;
+    margin: 0;
+    padding: 15px 0;
 }
 
-img{
-    width: 100px;
-    height:50px;
-}
+
   

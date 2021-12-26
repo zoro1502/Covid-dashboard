@@ -1,8 +1,7 @@
 .container-fluid {
   background: url("../assets/img/back_ground_covid.jpeg");
   background-size: cover;
-  height: 90vh;
-  position: relative;
+  width: 100%;
 }
 
 .box {
