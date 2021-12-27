@@ -100,18 +100,11 @@ export class CovidService {
     this.loginStatus = true;
     localStorage.setItem('currentUser', JSON.stringify(user));
     this.currentUser = user
-    this.loginStatusSubject.next({
-      loginStatus: this.loginStatus,
-      currentUser: user,
-    })
+    this.loginStatusSubject.next(this.loginStatus)
   }
   logout(){
     this.loginStatus = false;
     localStorage.removeItem('currentUser');
-
-    this.loginStatusSubject.next({
-      loginStatus: false,
-      currentUser: null,
-    })
+    this.loginStatusSubject.next(this.loginStatus)
   }
 }

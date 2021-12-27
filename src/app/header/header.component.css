@@ -37,10 +37,16 @@ img {
 }
 
 
+
 @media only screen and (min-width: 992px){
   .navbar-collapse a {
     color: white;
     font-size: 15px;
+  }
+}
+@media only screen and (max-width: 360px){
+  button{
+    padding: 3px;
   }
 }
 

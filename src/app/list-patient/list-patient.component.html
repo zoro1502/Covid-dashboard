@@ -1,11 +1,11 @@
-<div class="list-patient">
+<div class="list-patient pt-5">
   <div class="list-patient-header d-flex justify-content-around">
     <h1><i class="fas fa-list mx-2"></i>List patient</h1>
     <pagination-controls (pageChange)="p = $event"></pagination-controls>
   </div>
   <div class="list-patient-body d-flex flex-column flex-lg-row">
     <ul class="list-group">
-      <li class="list-group-item" *ngFor="let patient of listPatient | paginate: { itemsPerPage: 10, currentPage: p }" (click)="choosePatient(patient.id)">{{patient.name}} -- {{patient.address.city}}</li>
+      <li class="list-group-item" *ngFor="let patient of listPatient | paginate: { itemsPerPage: 3, currentPage: p }" (click)="choosePatient(patient.id)">{{patient.name}} -- {{patient.address.city}}</li>
     </ul>
     <div class="patient-infor">
       <router-outlet></router-outlet>

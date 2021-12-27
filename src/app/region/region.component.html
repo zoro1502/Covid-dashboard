@@ -13,19 +13,19 @@
         <div class="section row">
             <div class="region-detail col-6 col-sm-3 col-lg-4 px-sm-5 offset-lg-1 py-4 mt-lg-5 confirmed ">
                 <h5 class="title"><i class="fas fa-user"></i> Confirmed</h5>
-                <p class="region-about">{{country.confirmed | number}}</p>
+                <p *ngIf="country!==undefined" class="region-about">{{country.confirmed | number}}</p>
             </div>
             <div class="region-detail col-6 col-sm-3 col-lg-4 px-sm-5 offset-lg-1 py-4 mt-lg-5 recovered">
                 <h5 class="title"><i class="fas fa-first-aid"></i>Recovered</h5>
-                <p class="region-about">{{country.confirmed | number}}</p>
+                <p *ngIf="country!==undefined" class="region-about">{{country.confirmed | number}}</p>
             </div>
             <div class="region-detail col-6 col-sm-3 col-lg-4 px-sm-5 offset-lg-1 py-4 mt-lg-5 death">
                 <h5 class="title"><i class="fas fa-bed"></i>Death</h5>
-                <p class="region-about">{{country.confirmed | number}}</p>
+                <p *ngIf="country!==undefined" class="region-about">{{country.confirmed | number}}</p>
             </div>
             <div class="region-detail col-6 col-sm-3 col-lg-4 px-sm-5 offset-lg-1 py-4 mt-lg-5 fatality ">
                 <h5 class="title"> <i class="fas fa-exclamation-circle"></i>Fatality rate</h5>
-                <p class="region-about">{{rate}}%</p>
+                <p *ngIf="country!==undefined" class="region-about">{{rate}}%</p>
             </div>
         </div>
     </div>

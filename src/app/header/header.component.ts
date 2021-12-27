@@ -12,6 +12,7 @@ export class HeaderComponent implements OnInit {
   
   constructor(private router: Router, private service: CovidService) {
     this.service.loginStatusSubject.subscribe((param:any)=>{
+      console.log(param)
       this.listPatientStatus = param
     })
   }
@@ -19,9 +20,11 @@ export class HeaderComponent implements OnInit {
   ngOnInit(): void {}
 
   loginClick() {
+   
     this.router.navigate(['login']);
   }
   logoutClick(){
     this.service.logout()
+    this.router.navigate(['world']);
   }
 }

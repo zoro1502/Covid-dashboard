@@ -46,8 +46,7 @@ export class ChartRegionComponent implements OnInit {
       this.colorScheme = {
         domain: ['blue', 'red', 'green',]
       };
-      console.log(this.colorScheme)
-      console.log(this.time +"    "+this.infor)
+   
       this.service.getTimeseriesByRegion(this.choice).subscribe((res: any) => {
         this.countryTimeseries = res[0].timeseries
      
@@ -196,7 +195,7 @@ export class ChartRegionComponent implements OnInit {
             arrDate.push(this.arrKeyTime[i])
           }
           this.single[0].series = this.service.getMultiChart(this.countryTimeseries, arrDate, this.single[0].name)
-          console.log(this.single)
+         
         }
         break;
       case '4':
